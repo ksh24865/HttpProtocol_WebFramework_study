@@ -1,8 +1,8 @@
-[HttpProtocol](#1.-HttpProtocol)
+[HttpProtocol](#1.HttpProtocol)
 
-[WebFramework](#2.-WebFramework)
+[WebFramework](#2.WebFramework)
 
-# 1. HttpProtocol
+# 1.HttpProtocol
 ## HTTP
 * `HTTP(Hyper Text Transfer Protocol, 하이퍼텍스트 전송 방식)`이라는 규칙을 통하여 데이터를 주고 받기 위한 서버/클라이언트 모델을 따르는 프로토콜
 * 하이퍼 텍스트는 하이퍼링크를 통하여 이곳에서 저곳으로 움직일 수 있는 텍스트라고 할 수 있다.
@@ -148,12 +148,14 @@
 ### URL, 요청 메서드, 상태 코드를 조합
 ![img04](https://user-images.githubusercontent.com/55729930/94677491-f1e09f00-0357-11eb-9ba1-cd6c264e4680.jpg)
 
-# 2. WebFramework
+# 2.WebFramework
 * #### 웹 프레임워크
    * 동적인 웹페이지나 웹서비스 개발하는 과정에서 DB연동, 템플릿, 세션 관리,  코드 재사용등의 어려움을 줄이는 것이 목적인 프레임워크
    * [MVC 아키텍처 패턴](#MVC-패턴)을 따라 사용자 인터페이스로부터 비즈니스 규칙과 데이터 모델을 분리해 낸다.
 
 * #### 웹 프레임워크 동작 방식
+
+![img06](https://user-images.githubusercontent.com/55729930/94706546-49453600-037d-11eb-9aa6-52f4dd87c9aa.jpg)
 
    * 라우터: http 메서드와 URL 패턴별로 핸들러를 등록하고, 웹 요청이 들어왔을 때 적절한 핸들러로 연결
       ```
