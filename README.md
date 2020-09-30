@@ -1,4 +1,5 @@
 [HttpProtocol](#1.-HttpProtocol)
+
 [WebFramework](#2.-WebFramework)
 
 # 1. HttpProtocol
@@ -150,7 +151,7 @@
 # 2. WebFramework
 * #### 웹 프레임워크
    * 동적인 웹페이지나 웹서비스 개발하는 과정에서 DB연동, 템플릿, 세션 관리,  코드 재사용등의 어려움을 줄이는 것이 목적인 프레임워크
-   * MVC 아키텍처 패턴을 따라 사용자 인터페이스로부터 비즈니스 규칙과 데이터 모델을 분리해 낸다.
+   * [MVC 아키텍처 패턴](#MVC-패턴)을 따라 사용자 인터페이스로부터 비즈니스 규칙과 데이터 모델을 분리해 낸다.
 
 * #### 웹 프레임워크 동작 방식
 
@@ -189,7 +190,24 @@
 		* 쿠키보다는 안전 하지만 세션 정보도 중간에 탈취 당할 수 있기 때문에 보안에 완벽하다고 할 수 없다.
 		* 세션을 사용하면 서버에 사용자 정보를 저장하므로, 서버의 메모리를 차지하게 되고, 만약 동시 접속자 수가 많은 서비스일 경우에는 서버 과부화의 원인이 된다.
    
+* #### MVC 패턴
+	* `M`odel, `V`iew, `C`ontroller의 약자
+	
+		![img05](https://user-images.githubusercontent.com/55729930/94705341-e3a47a00-037b-11eb-9a61-10c035cdcfa5.jpg)
+		* 프로젝트를 효율적으로 진행할 수 있도록 하는 일종의 디자인 패턴, 방법론
+		* 웹 어플리케이션을 데이터 처리, UI, 핸들러 등으로 나누고 각 컴포넌트에 집중할 수 있도록 하는 패턴
+	* Model
+		* 어플리케이션의 정보, 데이터를 담당하는 컴포넌트
+		* ex) Database, Business Logic
+	* View
+		* 사용자 인터페이스를 담당하는 컴포넌트
+		* ex) Frontend
+	* Controller
+		* Model과 View를 잇는 다리역할
+		* 사용자 요청에 따라 Model를 적절히 조작, 검색 후 결과를 View를 통해 사용자에게 전달
 
+
+	
 * golang & gin install
 ```
 sudo add-apt-repository ppa:longsleep/golang-backports
