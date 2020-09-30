@@ -1,7 +1,3 @@
-[HttpProtocol](#1.HttpProtocol)
-
-[WebFramework](#2.WebFramework)
-
 # 1.HttpProtocol
 ## HTTP
 * `HTTP(Hyper Text Transfer Protocol, 하이퍼텍스트 전송 방식)`이라는 규칙을 통하여 데이터를 주고 받기 위한 서버/클라이언트 모델을 따르는 프로토콜
