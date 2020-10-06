@@ -214,10 +214,10 @@
 	* gin.context.Param
 		* URL Path에 ":"를 지정하면 Gin의 라우터가 파라미터로 처리
 		* URL에 지정된 파라미터를 처리함
-			*ex) `~~ GET("/view/:article_id", handler.GetArticle)`,`~~ c.Param("article_id") ~~`
+			* ex) `~~ GET("/view/:article_id", handler.GetArticle)`,`~~ c.Param("article_id") ~~`
 	* gin.context.PostForm
 		* Post request의 body 값의 form 데이터 조회
-			*ex) `title := c.PostForm("title")`
+			* ex) `title := c.PostForm("title")`
 	* gin.H
 		* map[string]interface{}와 같음
 			* ex) `gin.H{"title": article.Title, "payload": article}`, `gin.H["title"]`
