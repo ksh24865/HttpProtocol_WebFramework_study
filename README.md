@@ -204,6 +204,33 @@
 		* Model과 View를 잇는 다리역할
 		* 사용자 요청에 따라 Model를 적절히 조작, 검색 후 결과를 View를 통해 사용자에게 전달
 
+* #### gin
+	* gin.context
+		* gin 프레임워크에서 하나의 요청을 처리하는 모든 핸들러에서 함수 인자로 사용하는 변수타입
+			* ex) `func TmpHandler(c *gin.Context){ ~ ~ }`
+		* http 요청을 처리하는 일련의 과정에서 key:value 형태로 값을 저장 및 조회
+			* ex) `c.Request.Header.Get("Accept")`
+		* Goroutine의 생성, 중단 등 flow control의 역할 수행
+	* gin.context.Param
+		* URL Path에 ":"를 지정하면 Gin의 라우터가 파라미터로 처리
+		* URL에 지정된 파라미터를 처리함
+			*ex) `~~ GET("/view/:article_id", handler.GetArticle)`,`~~ c.Param("article_id") ~~`
+	* gin.context.PostForm
+		* Post request의 body 값의 form 데이터 조회
+			*ex) `title := c.PostForm("title")`
+	* gin.H
+		* map[string]interface{}와 같음
+			* ex) `gin.H{"title": article.Title, "payload": article}`, `gin.H["title"]`
+	* gin.Default()
+		* Gin 프레임워크의 라우터 생성
+	* gin.Default().LoadHTMLGlob("path/*")
+		* "./path/" 파일 경로에 있는 html파일들을 요청 처리에 사용할 수 있도록 로드
+	* gin.Default().Run("path")
+		* 루프백 주소(localhost)의 8080포트로 소켓을 열고 서버를 실행
+			* ex) `gin.Default().Run(":8080")`
+		* PC의 주소로 서버를 실행 
+			* ex) `gin.Default().Run("192.168.10.1:8080")`
+	
 
 	
 * golang & gin install
