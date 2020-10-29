@@ -233,17 +233,18 @@
 	
 
 	
-* golang & gin install        
-        *PC
+* golang & gin install 
+        * PC
+
 ```
 sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
 sudo apt-get install golang-go
 go get -u github.com/gin-gonic/gin
 ```
+* 라즈베리파이
 
 
-        * 라즈베리파이
 ```
 wget https://dl.google.com/go/go1.15.3.linux-armv6l.tar.gz
 tar -C /usr/local -xzf go1.15.3.linux-armv6l.tar.gz
