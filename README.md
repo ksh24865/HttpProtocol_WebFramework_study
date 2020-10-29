@@ -233,10 +233,25 @@
 	
 
 	
-* golang & gin install
+* golang & gin install        
+        *PC
 ```
 sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
 sudo apt-get install golang-go
+go get -u github.com/gin-gonic/gin
+```
+
+
+        * 라즈베리파이
+```
+wget https://dl.google.com/go/go1.15.3.linux-armv6l.tar.gz
+tar -C /usr/local -xzf go1.15.3.linux-armv6l.tar.gz
+mkdir home/pi/go home/pi/go/src home/pi/go/bin home/pi/pkg
+vi ~/.bashrc
+        맨 밑줄에 추가
+                export GOPATH=$HOME/go
+                export GOBIN=$GOPATH/bin
+                export PATH=$PATH:/usr/local/go/bin
 go get -u github.com/gin-gonic/gin
 ```
